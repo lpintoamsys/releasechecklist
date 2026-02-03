@@ -1,0 +1,252 @@
+{
+    "CI": {
+        "Windows": {
+            "items": [
+                "Ensure correct branch is used for package creation",
+                "Ensure all appsettings.json and web.config are included (Config folder)",
+                "Tools folder must be included after Database folder (Differential package)",
+                "Database folder must not contain golden copy folders (Differential only)",
+                "CI version must be updated in DB scripts",
+                "Tenant database scripts must exist in Database folder",
+                "README.md must be present with topic creation details (if applicable)",
+                "No migration scripts should be present (Refer HF2  - Differential only)",
+                "Applications : ARCON Web Components : ARCONUI / CiConfig / Workspace must exist",
+                "Applications : ARCON Onboarding Components : ARCONUI / OnboardingUI must exist",
+                "Applications : ARCON Windows Components : RDPS Service / WinVaulting must exist",
+                "Applications : ARCON Workflow Components : ARCONUI / WorkflowUI must exist",
+                "Applications : IntegrationHub_API folder must exist",
+                "Applications : KAFKA : BridgeDashboardUI / KafkaAPI must exist",
+                "CI : ArconDeployX folder must exist",
+                "CI : BuildOutputWin folder must exist",
+                "CI : Config folder must exist",
+                "CI : Database folder must exist",
+                "CI : Symlink JSONs and Symlink EXE must exist",
+                "CI : ArconDeployX must contain OCI documentation",
+                "CI : Database : MySQL folder must exist",
+                "CI : Database : MsSQL folder must exist",
+                "CI : Database : SSE folder must exist",
+                "CI : ARCONClients folder must exist",
+                "Symlink scripts must generate appsettings.json and web.config",
+                "cimtplaybook.tar.gz must be generated using Unix OS",
+                "DeployX JSONs must be updated for Windows and Linux",
+                "config.tar.gz must match latest common config from GIT",
+                "Files must be digitally signed",
+                "Hash value must be generated",
+                "Obfuscation and Signing  of OCI Deployx",
+                "MFA Package to be Included in Full and Differential Package",
+                "Build Workspace UI for RHEL manually. Do not use from Jenkins pipeline publish",
+                "Ensure that no errors reported in DB Scripts",
+                "Ensure symlink exe is whitelisted at client side and instructions to be added in READMe file",
+                "OCI Documentation should be included in the Package",
+                "Migration and Indexes folder should not exists for Differential Package in MySQL and MsSQL"
+            ],
+            "automated": {
+                "Ensure all appsettings.json and web.config are included (Config folder)": true,
+                "Tools folder must be included after Database folder (Differential package)": true,
+                "Database folder must not contain golden copy folders (Differential only)": true,
+                "CI version must be updated in DB scripts": false,
+                "ActiveX version must be updated in DB scripts": false,
+                "Tenant database scripts must exist in Database folder": true,
+                "README.md must be present with topic creation details (if applicable)": false,
+                "Symlink scripts must generate appsettings.json and web.config": true,
+                "cimtplaybook.tar.gz must be generated using Unix OS": true,
+                "DeployX JSONs must be updated for Windows and Linux": true,
+                "config.tar.gz must match latest common config from GIT": true,
+                "Ensure correct branch is used for package creation": true,
+                "No migration scripts should be present (Refer HF2  - Differential only)": true,
+                "Applications : ARCON Onboarding Components : ARCONUI / OnboardingUI must exist": true,
+                "Applications : ARCON Web Components : ARCONUI / CiConfig / Workspace must exist": true,
+                "Applications : ARCON Windows Components : RDPS Service / WinVaulting must exist": true,
+                "Applications : ARCON Workflow Components : ARCONUI / WorkflowUI must exist": true,
+                "Applications : IntegrationHub_API folder must exist": true,
+                "Applications : KAFKA : BridgeDashboardUI / KafkaAPI must exist": true,
+                "CI : ArconDeployX folder must exist": true,
+                "CI : BuildOutputWin folder must exist": true,
+                "CI : Config folder must exist": true,
+                "CI : Database folder must exist": true,
+                "CI : Symlink JSONs and Symlink EXE must exist": true,
+                "CI : ArconDeployX must contain OCI documentation": true,
+                "CI : Database : MySQL folder must exist": true,
+                "CI : Database : MsSQL folder must exist": true,
+                "CI : Database : SSE folder must exist": true,
+                "CI : ARCONClients folder must exist": true,
+                "Files must be digitally signed": false,
+                "Hash value must be generated": false,
+                "Build Workspace UI for RHEL manually. Do not use from Jenkins pipeline publish": false,
+                "Ensure that no errors reported in DB Scripts": true,
+                "Obfuscation and Signing  of OCI Deployx": false,
+                "Ensure symlink exe is whitelisted at client side and instructions to be added in READMe file": false,
+                "OCI Documentation should be included in the Package": true,
+                "MFA Package to be Included in Full and Differential Package": false,
+                "Migration and Indexes folder should not exists for Differential Package in MySQL and MsSQL": true
+            },
+            "task_ids": {
+                "Ensure correct branch is used for package creation": "TASK-001",
+                "Ensure all appsettings.json and web.config are included (Config folder)": "TASK-002",
+                "Tools folder must be included after Database folder (Differential package)": "TASK-003",
+                "Database folder must not contain golden copy folders (Differential only)": "TASK-004",
+                "CI version must be updated in DB scripts": "TASK-005",
+                "Tenant database scripts must exist in Database folder": "TASK-006",
+                "README.md must be present with topic creation details (if applicable)": "TASK-007",
+                "Symlink scripts must generate appsettings.json and web.config": "TASK-025",
+                "cimtplaybook.tar.gz must be generated using Unix OS": "TASK-026",
+                "DeployX JSONs must be updated for Windows and Linux": "TASK-027",
+                "config.tar.gz must match latest common config from GIT": "TASK-028",
+                "No migration scripts should be present (Refer HF2  - Differential only)": "TASK-008",
+                "Applications : ARCON Onboarding Components : ARCONUI / OnboardingUI must exist": "TASK-010",
+                "Applications : ARCON Web Components : ARCONUI / CiConfig / Workspace must exist": "TASK-009",
+                "Applications : ARCON Windows Components : RDPS Service / WinVaulting must exist": "TASK-011",
+                "Applications : ARCON Workflow Components : ARCONUI / WorkflowUI must exist": "TASK-012",
+                "Applications : IntegrationHub_API folder must exist": "TASK-013",
+                "Applications : KAFKA : BridgeDashboardUI / KafkaAPI must exist": "TASK-014",
+                "CI : ArconDeployX folder must exist": "TASK-015",
+                "CI : BuildOutputWin folder must exist": "TASK-016",
+                "CI : Config folder must exist": "TASK-017",
+                "CI : Database folder must exist": "TASK-018",
+                "CI : Symlink JSONs and Symlink EXE must exist": "TASK-019",
+                "CI : ArconDeployX must contain OCI documentation": "TASK-020",
+                "CI : Database : MySQL folder must exist": "TASK-021",
+                "CI : Database : MsSQL folder must exist": "TASK-022",
+                "CI : Database : SSE folder must exist": "TASK-023",
+                "CI : ARCONClients folder must exist": "TASK-024",
+                "Files must be digitally signed": "TASK-029",
+                "Hash value must be generated": "TASK-030",
+                "Build Workspace UI for RHEL manually. Do not use from Jenkins pipeline publish": "TASK-032",
+                "Ensure that no errors reported in DB Scripts": "TASK-033",
+                "Obfuscation and Signing  of OCI Deployx": "TASK-031",
+                "Ensure symlink exe is whitelisted at client side and instructions to be added in READMe file": "TASK-034",
+                "OCI Documentation should be included in the Package": "TASK-035",
+                "MFA Package to be Included in Full and Differential Package": "TASK-031",
+                "Migration and Indexes folder should not exists for Differential Package in MySQL and MsSQL": "TASK-036"
+            },
+            "descriptions": {
+                "Ensure all appsettings.json and web.config are included (Config folder)": "1. Navigate to Config Folder in the Package and verify the each folder has respective appsettings.json or web config.\n2. CI_Reports does not have any config associated with it",
+                "Tools folder must be included after Database folder (Differential package)": "1. Tools folder is application for both Full and Differential Package.\n2. For Full, the location is under ArconDeployx Folder\n3. For Differential, is placed after Database folder.\n4. Tools folder should consists of DBExecutor.exe",
+                "Database folder must not contain golden copy folders (Differential only)": "1. For Differential, the should be any golden copies included.\n2. For Differential, the index and migration scripts are not required.\n3. For Differential, the if the db scripts are not changes, then those db scripts should be excluded. \n4. For Full, everything has to included.",
+                "CI version must be updated in DB scripts": "1. DB Scripts are updated by Development Team.\n2. Every time the package is created, this should be manually checked if the correct version is reflected in the db scripts.",
+                "ActiveX version must be updated in DB scripts": "",
+                "Tenant database scripts must exist in Database folder": "",
+                "Files must be digitally signed": "1. Irrespective of Package, full or differential, all ARCOS/ARCOS files has to be signed.\n2. If there is a change the symlink, this has to be signed.\n3. OCI files has to be signed.",
+                "Hash value must be generated": "",
+                "README.md must be present with topic creation details (if applicable)": "",
+                "Symlink scripts must generate appsettings.json and web.config": "",
+                "cimtplaybook.tar.gz must be generated using Unix OS": "",
+                "DeployX JSONs must be updated for Windows and Linux": "",
+                "config.tar.gz must match latest common config from GIT": "",
+                "Ensure correct branch is used for package creation": "1. Ensure JIRA Ticket is created for Package Creation from Ronit Bose\n2. Ensure that the jenkins pipeline is pointing to the branch as mentioned in the JIRA Ticket.\n3. Branch should be locked before Package Creation process",
+                "No migration scripts should be present (Refer HF2  - Differential only)": "1. Differential Package should not have any Golden Copy.\n2. No Migration db scripts should be included.",
+                "Applications : ARCON Onboarding Components : ARCONUI / OnboardingUI must exist": "1. Placeholder for Onboarding UI\n2. No signing required",
+                "Applications : ARCON Web Components : ARCONUI / CiConfig / Workspace must exist": "1. This is placeholder for Workspace UI as part of base package.\n2. This is applicable for Full Package / Differential",
+                "Applications : ARCON Windows Components : RDPS Service / WinVaulting must exist": "Base Package\n\n1. ARCON Windows Components should have below foldrs\nRDPS Service\nWinVaulting - We need to check if this has changes from PAM and make sure the updated code is reflected in the folder.",
+                "Applications : ARCON Workflow Components : ARCONUI / WorkflowUI must exist": "1. Ensure Workflow UI Folder exists.\n2. No Signing is required.",
+                "Applications : IntegrationHub_API folder must exist": "1. This folder should be in the root of Application Folder.\n2. The files will be signed for this folder.",
+                "Applications : KAFKA : BridgeDashboardUI / KafkaAPI must exist": "Following should be included in the base package\n\n1. Kafka Dashboard UI\n2. KAFKA API\n3. Signing required for API",
+                "CI : ArconDeployX folder must exist": "1. This is automated from Jenkins Pipeline.\n2. The folder is placed by COE on drive where the pull is happening",
+                "CI : BuildOutputWin folder must exist": "1. This is the folder which has all details of exe and dlls",
+                "CI : Config folder must exist": "1. All the appsettings.json and web.config are fould under this folder.\n2. Used by symlink creation for moving respective files to specific service, bots and jobs folder.\n3. Ensure that if the new service got added, then the change has to done in the git.\n4. Jenkins uses git checkout for moving this folder to the package.",
+                "CI : Database folder must exist": "1. Ensure MySQL Folder exists with full GC and schema scripts\n2. Ensure MsSQL Folder exists with full GC and schema scripts\n3. SSE Scripts folder which has sse related db scripts. This is not required for Differential",
+                "CI : Symlink JSONs and Symlink EXE must exist": "1. Json for Bots should exists\n2. Json for Jobs should exists\n3. Json for Services should exists\n4. Json for all(jobs/bots/services) should exists\n5. Signed symlink creation exe should exists",
+                "CI : ArconDeployX must contain OCI documentation": "",
+                "CI : Database : MySQL folder must exist": "",
+                "CI : Database : MsSQL folder must exist": "",
+                "CI : Database : SSE folder must exist": "1. SSE Package should be included only for full package.\n2. SSE documentation should be included in the package.",
+                "CI : ARCONClients folder must exist": "",
+                "Build Workspace UI for RHEL manually. Do not use from Jenkins pipeline publish": "",
+                "Ensure that no errors reported in DB Scripts": "Jenkins jobs should be checked if there are any errors reflected in DB Scripts",
+                "Obfuscation and Signing  of OCI Deployx": "1. Ensure the OCI DeployX files are obfuscated.\n2. Ensure the files are signed.\n3. Need to automate this process",
+                "Ensure symlink exe is whitelisted at client side and instructions to be added in READMe file": "If the exe is getting access denied from Malware Software, the same has to whitelisted at the customer end.",
+                "OCI Documentation should be included in the Package": "",
+                "MFA Package to be Included in Full and Differential Package": "1. Ensure that the MFA package is included in full package\n2. Ensure that the MFA Package is included in the differential package",
+                "Migration and Indexes folder should not exists for Differential Package in MySQL and MsSQL": ""
+            }
+        },
+        "Linux": {
+            "items": [],
+            "automated": {},
+            "task_ids": {},
+            "descriptions": {}
+        }
+    },
+    "PAM": {
+        "Windows": {
+            "items": [],
+            "automated": {},
+            "task_ids": {},
+            "descriptions": {}
+        },
+        "Linux": {
+            "items": [],
+            "automated": {},
+            "task_ids": {},
+            "descriptions": {}
+        }
+    },
+    "EPM": {
+        "Windows": {
+            "items": [],
+            "automated": {},
+            "task_ids": {},
+            "descriptions": {}
+        },
+        "Linux": {
+            "items": [],
+            "automated": {},
+            "task_ids": {},
+            "descriptions": {}
+        }
+    },
+    "GRA": {
+        "Windows": {
+            "items": [],
+            "automated": {},
+            "task_ids": {},
+            "descriptions": {}
+        },
+        "Linux": {
+            "items": [],
+            "automated": {},
+            "task_ids": {},
+            "descriptions": {}
+        }
+    },
+    "MyVault": {
+        "Windows": {
+            "items": [],
+            "automated": {},
+            "task_ids": {},
+            "descriptions": {}
+        },
+        "Linux": {
+            "items": [],
+            "automated": {},
+            "task_ids": {},
+            "descriptions": {}
+        }
+    },
+    "Drut": {
+        "Windows": {
+            "items": [],
+            "automated": {},
+            "task_ids": {},
+            "descriptions": {}
+        },
+        "Linux": {
+            "items": [],
+            "automated": {},
+            "task_ids": {},
+            "descriptions": {}
+        }
+    },
+    "Windows": {
+        "items": [],
+        "automated": {},
+        "task_ids": {},
+        "descriptions": {}
+    },
+    "Linux": {
+        "items": [],
+        "automated": {},
+        "task_ids": {},
+        "descriptions": {}
+    }
+}
