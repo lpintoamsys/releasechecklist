@@ -7,7 +7,7 @@ metadata:
     app: cireleasechecklist
     environment: dev
   annotations:
-    description: "Nginx deployment with best practices"
+    description: "Streamlit checklist application deployment"
 spec:
   replicas: 1
   selector:
@@ -20,35 +20,29 @@ spec:
         environment: dev
     spec:
       containers:
-        - name: nginx
-          image: nginx:1.25.3
+        - name: cireleasechecklist
+          image: ghcr.io/lpintoamsys/cireleasechecklist:latest
           ports:
-            - containerPort: 80
+            - containerPort: 8020
           resources:
             requests:
-              memory: "32Mi"
-              cpu: "50m"
+              memory: "256Mi"
+              cpu: "200m"
             limits:
-              memory: "64Mi"
-              cpu: "100m"
+              memory: "512Mi"
+              cpu: "500m"
           readinessProbe:
             httpGet:
-              path: /
-              port: 80
-            initialDelaySeconds: 3
+              path: / 
+              port: 8020
+            initialDelaySeconds: 5
             periodSeconds: 10
           livenessProbe:
             httpGet:
-              path: /
-              port: 80
-            initialDelaySeconds: 5
+              path: /_stcore/health
+              port: 8020
+            initialDelaySeconds: 10
             periodSeconds: 20
           envFrom:
             - configMapRef:
                 name: cireleasechecklist-config
-      # Example: Uncomment and set if you use a custom service account
-      # serviceAccountName: my-service-account
-      # Example: Uncomment to add environment variables
-      # env:
-      #   - name: ENV_VAR_NAME
-      #     value: "value"
