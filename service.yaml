@@ -3,6 +3,12 @@ kind: Service
 metadata:
   name: cireleasechecklist-service
   namespace: devops
+  labels:
+    app: cireleasechecklist
+    component: backend
+    managed-by: kubernetes
+  annotations:
+    description: "Service for CI Release Checklist application"
 spec:
   selector:
     app: cireleasechecklist
@@ -12,3 +18,4 @@ spec:
       targetPort: 8020
       name: http
   type: ClusterIP
+  sessionAffinity: None
